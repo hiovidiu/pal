@@ -11,6 +11,7 @@ libpal_image_la_SOURCES = \
     p_scharr3x3.c \
     p_sobel3x3.c \
     p_harris3x3.c\
+    p_threshold.c\
     p_grayscale.c
 
 libpal_image_la_LIBADD = -lm

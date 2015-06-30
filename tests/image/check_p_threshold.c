@@ -13,7 +13,7 @@ Currently, the test is only using Arm
 #include <stdlib.h>
 #include <unistd.h>
 #include <pal.h>
-#include "rgb2greyscale_test_data.h"
+#include "threshold_test_data.h"
 
 #define MAX_REL_DIFF  0.0001
 #define OK 1
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
     int testFail = 0;
 
     // Run the test on Arm
-    p_rgb2grayscale_f32(in, test_out, in_rows, in_cols);
+    p_threshold_f32(in, test_out, pixels, in_threshold);
 
     // Check data
     for ( i = 0; i < out_size; i++ ) {
@@ -60,9 +60,9 @@ int main(int argc, char *argv[])
     }
 
     if (testFail){
-      printf("RGB2Grayscale ARM test FAILED!!\n");
+      printf("Threshold ARM test FAILED!!\n");
     } else {
-      printf("RGB2Grayscale ARM test OK\n");
+      printf("Threshold ARM test OK\n");
     }
 
     return testFail;

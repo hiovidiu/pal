@@ -6,7 +6,7 @@
  * Each channel is replaced with the grayscale value.
  * The grayscale value is computed as 0.299*R + 0.587*G + 0.114*B
  *
- * @param x     Pointer to input image, a 2D array of size 'rows' x 'cols' x 3 bytes (1 byte/channel)
+ * @param x     Pointer to input image, a 2D array of size 'rows' x 'cols' x 3 float (1 float/channel)
  *
  * @param r     Pointer to output image
  *

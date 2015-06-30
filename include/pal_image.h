@@ -51,3 +51,6 @@ void p_harris3x3_f32(const float *x, float *r, float *t, int rows, int cols);
 
 /*RGB to Grayscale conversion */
 void p_rgb2grayscale_f32(const float *x, float *r, int rows, int cols);
+
+/*Thresholding */
+void p_threshold_f32(const float *x, float *r, int pixels, const float threshold);

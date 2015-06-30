@@ -8,10 +8,14 @@ endif
 
 LDADD = $(top_builddir)/src/libpal.la
 
-check_PROGRAMS = check_p_rgb2grayscale
+check_PROGRAMS = check_p_rgb2grayscale \
+		 check_p_threshold 
 
 check_p_rgb2grayscale_SOURCES = check_p_rgb2greyscale.c \
-                        rgb2greyscale_test_data.h
+                        	rgb2greyscale_test_data.h
+
+check_p_threshold_SOURCES = check_p_threshold.c \
+                            threshold_test_data.h
 
 TESTS = $(check_PROGRAMS)
 
